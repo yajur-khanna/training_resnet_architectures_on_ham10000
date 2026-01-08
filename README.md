@@ -32,7 +32,7 @@ The pipeline covers the complete workflow:
 
 ### Model Overview
 
-![ResNet-50 Architecture Overview](./ResNet50.png)
+![ResNet-50 Architecture Overview](.images/ResNet50.png)
 
 ---
 
