@@ -48,7 +48,7 @@ The model is based on the **ResNet-50** architecture, which uses deep residual l
 | Skip Connections | Identity / projection shortcuts |
 | Normalization | Batch Normalization |
 | Activation | ReLU |
-| Pooling | Global Average Pooling |
+| Pooling | Adaptive Global Average Pooling |
 | Output Layer | Fully Connected classification head |
 
 Residual connections allow the network to learn **residual mappings** instead of direct mappings, significantly reducing degradation and vanishing gradient issues as depth increases.
@@ -62,13 +62,13 @@ Residual connections allow the network to learn **residual mappings** instead of
 The project follows a structured **ETL (Extract, Transform, Load)** pipeline to ensure reproducibility and clean experimentation.
 
 ### Extract
-- Load image data from disk using PyTorch `Dataset` and `DataLoader`
-- Support for custom directory-based datasets
+- Load image data from kaggle input directory and store it in a pandas dataframe
+- Create new columns for full path for each image using image_id and store label encoded class labels
 
-### Transform
-- Resize images to model-compatible resolution
-- Normalize using ImageNet mean and standard deviation
-- Optional data augmentation for improved generalization
+### Transform and Custom Dataset
+- Create transform function to convert images to model-compatible resolution (3x224x224)
+- Implement the PyTorch `Dataset` interface to enable efficient batching, shuffling, and scalable training via `DataLoader`
+- The features passed to the dataset are the full paths to image column, labels are encoded class labels, and the custom transform created above is also passed as a parameter
 
 ### Load
 - Construct batched DataLoaders for training and validation
@@ -91,7 +91,7 @@ This separation allows easy substitution of datasets without modifying model log
 
 - Batch size: Configurable
 - Epochs: Configurable
-- Device: CPU / GPU (CUDA supported)
+- Device: GPU (CUDA supported)
 
 Training and validation metrics are tracked per epoch to monitor convergence and detect overfitting.
 
