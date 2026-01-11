@@ -167,3 +167,24 @@ The model is based on the **ResNet-101** architecture, a deeper variant of **Res
 | Activation | ReLU |
 | Pooling | Adaptive Global Average Pooling |
 | Output Layer | Fully Connected classification head |
+
+---
+
+## Results
+
+### Training vs Validation Accuracy
+
+![Training vs Validation Accuracy](./images/train_val_accuracy_resnet101.png)
+
+Training accuracy increases steadily, showing the model fits the training data very well. Validation accuracy peaks early (around epoch 10) and then declines, indicating overfitting. The best model is from the early epochs; training longer hurts generalization.
+
+---
+
+### Training vs Validation Loss
+
+![Training vs Validation Loss](./images/train_val_loss_resnet101.png)
+
+Training loss decreases consistently, confirming successful minimization of the objective function.  
+Validation loss initially decreases but later trends upward, indicating the onset of overfitting as model capacity begins to exceed generalization constraints.
+
+---
