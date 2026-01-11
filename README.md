@@ -1,6 +1,6 @@
-# ResNet on Skin Cancer disease detection (PyTorch)
+# ResNet on Skin Cancer detection (PyTorch)
 
-A deep learning–based image classification project implementing and fine-tuning a **various ResNet convolutional neural network** using PyTorch.  
+A deep learning–based image classification project implementing and fine-tuning a **multiple ResNet convolutional neural network** using PyTorch.  
 The project focuses on understanding **residual learning, training dynamics of deep CNNs, and end-to-end ML pipelines**, rather than treating the architecture as a black-box model.
 
 ---
@@ -42,9 +42,9 @@ The model is based on the **ResNet-50** architecture, which uses deep residual l
 
 | Component | Description |
 |---------|-------------|
-| Backbone | ResNet-50 |
 | Block Type | Bottleneck residual blocks |
 | Convolutions | 1×1 → 3×3 → 1×1 |
+| Number of Convolution Layers | 50 |
 | Skip Connections | Identity / projection shortcuts |
 | Normalization | Batch Normalization |
 | Activation | ReLU |
@@ -152,3 +152,18 @@ Overall, the model demonstrates effective optimization and representation learni
 
 Similar to ResNet-50, we just add more ResNet layers. We intitialize the ResNet-101 as -
 <code> resnet101 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7) </code>, we just use ResNet blocks in the third layer instead of the 6 in ResNet-50 (<code> resnet101 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7)</code>)
+
+## Model Architecture Summary
+
+The model is based on the **ResNet-101** architecture, a deeper variant of **ResNet-50**.
+
+| Component | Description |
+|---------|-------------|
+| Block Type | Bottleneck residual blocks |
+| Convolutions | 1×1 → 3×3 → 1×1 |
+| Number of Convolution Layers | 101 |
+| Skip Connections | Identity / projection shortcuts |
+| Normalization | Batch Normalization |
+| Activation | ReLU |
+| Pooling | Adaptive Global Average Pooling |
+| Output Layer | Fully Connected classification head |
