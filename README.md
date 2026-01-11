@@ -1,4 +1,4 @@
-# ResNet on Skin Cancer disease detection(PyTorch)
+# ResNet on Skin Cancer disease detection (PyTorch)
 
 A deep learning–based image classification project implementing and fine-tuning a **various ResNet convolutional neural network** using PyTorch.  
 The project focuses on understanding **residual learning, training dynamics of deep CNNs, and end-to-end ML pipelines**, rather than treating the architecture as a black-box model.
@@ -144,3 +144,10 @@ Test Loss: 1.31
 - These results motivate the use of **early stopping, stronger regularization, or increased data augmentation** to improve generalization.
 
 Overall, the model demonstrates effective optimization and representation learning, but tends to overfit.
+
+---
+
+## Architecture -
+
+### ResNet-101
+
