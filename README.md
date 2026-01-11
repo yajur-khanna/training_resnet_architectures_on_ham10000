@@ -151,3 +151,5 @@ Overall, the model demonstrates effective optimization and representation learni
 
 ### ResNet-101
 
+Similar to ResNet-50, we just add more ResNet layers. We intitialize the ResNet-101 as -
+<code> resnet50 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7) </code>
