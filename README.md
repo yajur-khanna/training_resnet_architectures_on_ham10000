@@ -115,8 +115,7 @@ These metrics help diagnose optimization issues and generalization behavior.
 
 ![Training vs Validation Accuracy](./images/train_val_accuracy_resnet50.png)
 
-Training accuracy increases steadily across epochs, indicating effective feature learning and stable optimization.  
-Validation accuracy improves early and then plateaus, suggesting that most generalizable patterns are learned within the initial training phase.
+Training accuracy increases steadily, showing the model fits the training data very well. Validation accuracy peaks early (around epoch 10) and then declines, indicating overfitting. The best model is from the early epochs; training longer hurts generalization.
 
 ---
 
