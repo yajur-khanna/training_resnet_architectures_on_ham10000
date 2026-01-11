@@ -132,6 +132,7 @@ Validation loss initially decreases but later trends upward, indicating the onse
 ### Test Results
 
 Test Accuracy: 66.13%
+
 Test Loss: 1.31
 
 ---
