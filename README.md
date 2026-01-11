@@ -113,7 +113,7 @@ These metrics help diagnose optimization issues and generalization behavior.
 
 ### Training vs Validation Accuracy
 
-![Training vs Validation Accuracy](./images/train_vs_val_accuracy_resnet_skincancer.png)
+![Training vs Validation Accuracy](./images/train_val_accuracy_resnet50.png)
 
 Training accuracy increases steadily across epochs, indicating effective feature learning and stable optimization.  
 Validation accuracy improves early and then plateaus, suggesting that most generalizable patterns are learned within the initial training phase.
@@ -122,7 +122,7 @@ Validation accuracy improves early and then plateaus, suggesting that most gener
 
 ### Training vs Validation Loss
 
-![Training vs Validation Loss](./images/train_vs_val_loss_resnet_skincancer.png)
+![Training vs Validation Loss](./images/train_val_loss_resnet50.png)
 
 Training loss decreases consistently, confirming successful minimization of the objective function.  
 Validation loss initially decreases but later trends upward, indicating the onset of overfitting as model capacity begins to exceed generalization constraints.
