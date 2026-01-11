@@ -129,6 +129,13 @@ Validation loss initially decreases but later trends upward, indicating the onse
 
 ---
 
+### Test Results
+
+Test Accuracy: 66.13%
+Test Loss: 1.31
+
+---
+
 ### Interpretation
 
 - The growing gap between training and validation metrics reflects **overfitting**, a common behavior in deep CNNs such as ResNet-50.
