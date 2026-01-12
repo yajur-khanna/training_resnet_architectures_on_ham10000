@@ -113,7 +113,7 @@ These metrics help diagnose optimization issues and generalization behavior.
 
 ### Training vs Validation Accuracy
 
-![Training vs Validation Accuracy](./images/train_val_accuracy_resnet50.png)
+![Training vs Validation Accuracy](./images/train_val_accuracy_for_resnet50.png)
 
 Training accuracy increases steadily, showing the model fits the training data very well. Validation accuracy peaks early (around epoch 10) and then declines, indicating overfitting. The best model is from the early epochs; training longer hurts generalization.
 
@@ -121,7 +121,7 @@ Training accuracy increases steadily, showing the model fits the training data v
 
 ### Training vs Validation Loss
 
-![Training vs Validation Loss](./images/train_val_loss_resnet50.png)
+![Training vs Validation Loss](./images/train_val_loss_for_resnet50.png)
 
 Training loss decreases consistently, confirming successful minimization of the objective function.  
 Validation loss initially decreases but later trends upward, indicating the onset of overfitting as model capacity begins to exceed generalization constraints.
