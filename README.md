@@ -176,7 +176,7 @@ The model is based on the **ResNet-101** architecture, a deeper variant of **Res
 
 ![Training vs Validation Accuracy](./images/train_val_accuracy_resnet101.png)
 
-Training accuracy increases steadily, showing the model fits the training data very well. Validation accuracy peaks early (around epoch 10) and then declines, indicating overfitting. The best model is from the early epochs; training longer hurts generalization.
+Training accuracy increases steadily, indicating stable learning and sufficient model capacity. Validation accuracy improves early and then fluctuates, suggesting mild overfitting but better generalization than ResNet-50. The train–validation gap remains moderate, implying ResNet-101 benefits from depth but still needs regularization or early stopping.
 
 ---
 
@@ -184,7 +184,6 @@ Training accuracy increases steadily, showing the model fits the training data v
 
 ![Training vs Validation Loss](./images/train_val_loss_resnet101.png)
 
-Training loss decreases consistently, confirming successful minimization of the objective function.  
-Validation loss initially decreases but later trends upward, indicating the onset of overfitting as model capacity begins to exceed generalization constraints.
+Training loss decreases smoothly, showing consistent optimization and effective learning. Validation loss drops early, then oscillates without a strong upward trend, indicating controlled overfitting. Compared to ResNet-50, ResNet-101 maintains a smaller train–validation loss gap, suggesting better generalization.
 
 ---
