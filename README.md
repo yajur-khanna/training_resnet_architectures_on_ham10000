@@ -187,3 +187,9 @@ Training accuracy increases steadily, indicating stable learning and sufficient 
 Training loss decreases smoothly, showing consistent optimization and effective learning. Validation loss drops early, then oscillates without a strong upward trend, indicating controlled overfitting. Compared to ResNet-50, ResNet-101 maintains a smaller train–validation loss gap, suggesting better generalization.
 
 ---
+
+### Test Results
+
+Test Accuracy: 74.18%
+
+Test Loss: 0.70
