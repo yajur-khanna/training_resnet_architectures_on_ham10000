@@ -150,7 +150,7 @@ Overall, the model demonstrates effective optimization and representation learni
 ### ResNet-101
 
 Similar to ResNet-50, we just add more ResNet layers. We intitialize the ResNet-101 as -
-<code> resnet101 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7) </code>, we just use ResNet blocks in the third layer instead of the 6 in ResNet-50 (<code> resnet101 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7)</code>)
+<code> resnet101 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7) </code>, we just use 23 ResNet blocks in the third layer instead of the 6 in ResNet-50 (<code> resnet101 = ResNet(resnet_block, [3, 4, 23, 3], 3, 7)</code>)
 
 ## Model Architecture Summary
 
@@ -192,3 +192,53 @@ Training loss decreases smoothly, showing consistent optimization and effective 
 Test Accuracy: 74.18%
 
 Test Loss: 0.70
+
+---
+
+## Architecture -
+
+### ResNet-152
+
+Similar to ResNet-50, we just add more ResNet layers. We intitialize the ResNet-152 as -
+<code> resnet152 = ResNet(resnet_block, [3, 8, 36, 3], 3, 7) </code>. Building with 8 and 36 blocks in the second and third layers respectively
+
+## Model Architecture Summary
+
+The model is based on the **ResNet-152** architecture, an even deeper variant of **ResNet-50**.
+
+| Component | Description |
+|---------|-------------|
+| Block Type | Bottleneck residual blocks |
+| Convolutions | 1×1 → 3×3 → 1×1 |
+| Number of Convolution Layers | 152 |
+| Skip Connections | Identity / projection shortcuts |
+| Normalization | Batch Normalization |
+| Activation | ReLU |
+| Pooling | Adaptive Global Average Pooling |
+| Output Layer | Fully Connected classification head |
+
+---
+
+## Results
+
+### Training vs Validation Accuracy
+
+![Training vs Validation Accuracy](./images/train_val_accuracy_resnet152.png)
+
+Training accuracy increases steadily, indicating stable but slower optimization typical of very deep networks like ResNet-152. Validation accuracy shows noticeable fluctuations, including sharp dips, suggesting higher sensitivity to optimization noise and data variability. Despite instability, the train–validation gap remains moderate overall, indicating reasonable generalization with potential gains from stronger regularization or early stopping.
+
+---
+
+### Training vs Validation Loss
+
+![Training vs Validation Loss](./images/train_val_loss_resnet152.png)
+
+Training loss decreases steadily, indicating successful optimization despite the network’s extreme depth. Validation loss shows oscillations and occasional spikes, reflecting sensitivity to noise and partial overfitting. The relatively bounded train–validation loss gap suggests ResNet-152 still generalizes reasonably well, though it benefits from careful regularization and early stopping.
+
+---
+
+### Test Results
+
+Test Accuracy: 71.32%
+
+Test Loss: 0.80
