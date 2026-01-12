@@ -123,8 +123,7 @@ Training accuracy increases steadily, showing the model fits the training data v
 
 ![Training vs Validation Loss](./images/train_val_loss_for_resnet50.png)
 
-Training loss decreases consistently, confirming successful minimization of the objective function.  
-Validation loss initially decreases but later trends upward, indicating the onset of overfitting as model capacity begins to exceed generalization constraints.
+Training loss decreases consistently, confirming successful minimization of the objective function. Validation loss initially decreases but later trends upward, indicating the onset of overfitting as model capacity begins to exceed generalization constraints.
 
 ---
 
